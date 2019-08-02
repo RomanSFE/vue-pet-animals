@@ -1,17 +1,27 @@
 <template>
     <div>
         <h2 class="mb-4">Dogs Component</h2>
-        <b-table striped hover :items="dogs"></b-table>
+        <b-table striped hover :items="dogs">
+            <template slot="name" slot-scope="data">
+                <router-link :to="`/pets/${data.index}`">
+                    {{ data.value }}
+                </router-link>
+            </template>
+        </b-table>
     </div>
 </template>
 
 <script>
-import dogs from '@/data/dogs'
+import {mapState} from 'vuex'
+
 export default {
     data(){
-        return {
-            dogs
-        }
-    }
+        return {}
+    },
+  computed: {
+    ...mapState([
+      'dogs'
+    ])
+  }
 }
 </script>
