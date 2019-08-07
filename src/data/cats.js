@@ -1,5 +1,6 @@
 export default [
   {
+    // image: <img src="assets/cat-1.jpg" alt="img"/>,
     name: 'Cat 1',
     gender: 'Male',
     age: '2',

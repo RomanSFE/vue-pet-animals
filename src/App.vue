@@ -29,4 +29,16 @@
     }
   }
 }
+
+
+#nav a.router-link-exact-active {
+    color: #3ff720;
+}
+
+#nav a {
+    padding: 10px;
+    background: #3042d0bd;
+    color: #fff;
+    border-radius: 5px;
+}
 </style>

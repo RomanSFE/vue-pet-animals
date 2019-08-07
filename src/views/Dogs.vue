@@ -1,9 +1,9 @@
 <template>
     <div>
-        <h2 class="mb-4">Dogs Component</h2>
+        <h2 class="mb-4 dogs-cls">Dogs Table</h2>
         <b-table striped hover :items="dogs">
             <template slot="name" slot-scope="data">
-                <router-link :to="`/pets/${data.index}`">
+                <router-link :to="`/pets/dogs/${data.index}`">
                     {{ data.value }}
                 </router-link>
             </template>
@@ -25,3 +25,8 @@ export default {
   }
 }
 </script>
+<style lang="css">
+    h2.mb-4.dogs-cls {
+    color: #ef355e;
+}
+</style>
